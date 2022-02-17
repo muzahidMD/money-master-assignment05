@@ -1,0 +1,20 @@
+img{
+    height: 600px;
+    opacity: 75%;
+}
+.half-width {
+    height: 100%;
+    background-color: #cef0f5;
+    /* text-align: center; */
+    /* padding: 10px; */
+    /* margin: 15px; */
+}
+
+input{
+    border: none;
+}
+button{
+    background-color: rgb(95, 243, 243);
+    padding: 3px 35px;
+    border: 2px solid orange;
+}
