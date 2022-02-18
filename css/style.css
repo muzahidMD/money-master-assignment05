@@ -5,9 +5,11 @@ img{
 .half-width {
     height: 100%;
     background-color: #cef0f5;
-    /* text-align: center; */
-    /* padding: 10px; */
-    /* margin: 15px; */
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input{

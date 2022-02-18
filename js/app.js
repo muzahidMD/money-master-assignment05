@@ -1,24 +1,37 @@
+function getInput(cost) {
+    const inputFeild = document.getElementById(cost + '-input');
+    const amound = parseFloat(inputFeild.value);
+
+    inputFeild.value = '';
+    return amound;
+}
+
 document.getElementById('calculateBtn').addEventListener('click', function () {
-    const foodInput = document.getElementById('food-input');
-    const foodAmound = parseFloat(foodInput.value);
+    // get Expenses input
+    const foodAmound = getInput('food');
 
-    const rentInput = document.getElementById('rent-input');
-    const rentAmound = parseFloat(rentInput.value);
+    const rentAmound = getInput('rent');
 
-    const clothesInput = document.getElementById('clothes-input');
-    const clothesAmound = parseFloat(clothesInput.value);
+    const clothesAmound = getInput('clothes');
+    // if ()
 
     const totalCost = foodAmound + rentAmound + clothesAmound;
 
     const totalExpenses = document.getElementById('expenses-total');
     const totalExpensesAmound = parseFloat(totalExpenses.innerText);
 
-    const expensesCost = totalExpensesAmound + totalCost;
-    totalExpenses.innerText = expensesCost;
+    const totalExpensesCost = totalExpensesAmound + totalCost;
 
+    // set total expensses
+    totalExpenses.innerText = totalExpensesCost;
 
-    // clear input feild 
-    foodInput.value = '';
-    rentInput.value = '';
-    clothesInput.value = '';
+    // balance calculation
+    const incomeAmound = getInput('income');
+
+    const restBalance = incomeAmound - totalExpensesCost;
+
+    // set balance 
+    const balanceFeild = document.getElementById('balance-total')
+    const balanceAmound = parseFloat(balanceFeild.innerText)
+    balanceFeild.innerText = restBalance;
 })
